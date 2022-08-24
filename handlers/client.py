@@ -101,7 +101,7 @@ async def contact(message):
 
 
 """обработчики хендлеров главного меню"""
-@dp.message_handler(lambda message: 'Где найти нужный тур?' in message.text)
+# @dp.message_handler(lambda message: 'Где найти нужный тур?' in message.text)
 async def maps(message : types.Message):
     msgUser = message  # берем msg пользователя, чтобы потом удалить его
     msg_id_user.append(msgUser)
@@ -164,10 +164,12 @@ async def vozduh(message : types.Message):
     msg_id_bot.append(msgBot)
 
 
+
 def regiter_handlers_client(dp : Dispatcher):
     dp.register_message_handler(commands_start, commands=['start', 'help'])
-    dp.register_message_handler(otkr_menu, lambda message: 'Открыть меню' in message.text)
     dp.register_message_handler(contact, content_types=['contact'])
+    dp.register_message_handler(maps, lambda message: 'Где найти нужный тур?' in message.text)
+    dp.register_message_handler(otkr_menu, lambda message: 'Открыть меню' in message.text)
     dp.register_message_handler(sochy, lambda message: 'СOЧИ' in message.text) # сочи о на анг, чтобы не среагировал на обзор на сочи кнопку
     dp.register_message_handler(abhaz, lambda message: 'АБХАЗИЯ' in message.text)
     dp.register_message_handler(voda, lambda message: 'МОРЕ' in message.text)

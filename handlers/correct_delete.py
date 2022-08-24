@@ -166,7 +166,7 @@ async def yes_now_otm(message : types.Message, state: FSMContext):
     if message.text == "Да":
         otv = delete_z(message.chat.id, number_otm)
         # пресылаем в групп
-        group_id = '-1001679490716'
+        group_id = '-1001632324261'
         next_id = number_otm
         await bot.send_message(group_id, f"Агент: {user_name} {sp_phone}\n"
                                          f"Заявка под номером {next_id} отменена!")
@@ -183,16 +183,16 @@ async def yes_now_otm(message : types.Message, state: FSMContext):
 # пустой обработчик должен быть в самом внизу
 # фильтруем мат, и убираем маскируещие символы
 # @dp.message_handler()
-async def echo_send(message : types.Message):
-    print(message)
-    if {i.lower().translate(str.maketrans('', '', string.punctuation)) for i in message.text.split(' ')}\
-        .intersection(set(json.load(open('cenz.json')))) != set():
-        await message.reply('Маты запрещены')
-        await message.delete()
+# async def echo_send(message : types.Message):
+#     print(message)
+#     if {i.lower().translate(str.maketrans('', '', string.punctuation)) for i in message.text.split(' ')}\
+#         .intersection(set(json.load(open('cenz.json')))) != set():
+#         await message.reply('Маты запрещены')
+#         await message.delete()
 
 
 # Регистрируем хендлеры
 def register_handlers_correct_delete(dp : Dispatcher):
     # машинное состояние
     dp.register_message_handler(correc_isp_state, lambda message: message.text in 'Корректировка заявки' or message.text in 'Нет', state=None)
-    dp.register_message_handler(echo_send)
+    # dp.register_message_handler(echo_send)

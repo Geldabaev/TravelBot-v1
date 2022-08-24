@@ -46,9 +46,7 @@ kb_soch_var3 = KeyboardButton('33 Водопада')
 kb_soch_var4 = KeyboardButton('Воронцовские пещеры')
 kb_soch_var5 = KeyboardButton('Каньоны Псахо (джип-тур)')
 kb_soch_var6 = KeyboardButton('Мамонтово Ущелье (джип-тур)')
-#kb_soch_var9 = KeyboardButton('ИНДИВИДУАЛЬНЫЙ ТУР')
 kb_soch_var10 = KeyboardButton('Эпоха времени')
-#kb_soch_var11 = KeyboardButton('Солохаул (джип-тур)')
 kb_client_sochy = ReplyKeyboardMarkup(resize_keyboard=True)
 kb_client_sochy.row(kb_soch_var1, kb_soch_var2).row(kb_soch_var3, kb_soch_var10).row(kb_soch_var4).row(kb_soch_var5, kb_soch_var6)#.add(kb_soch_var9)
 
@@ -57,10 +55,7 @@ kb_client_sochy.row(kb_soch_var1, kb_soch_var2).row(kb_soch_var3, kb_soch_var10)
 kb_abhaz_var1 = KeyboardButton('Золотое Кольцо')
 kb_abhaz_var2 = KeyboardButton('Абхазское застолье')
 kb_abhaz_var3 = KeyboardButton('Термальные Источники')
-#kb_abhaz_var4 = KeyboardButton('Города Призраки')
 kb_abhaz_var5 = KeyboardButton('Абхазский драйв (джип-тур)')
-#kb_abhaz_var6 = KeyboardButton('ИНДИВИДУАЛЬНЫЙ ТУР')
-#kb_abhaz_var7 = KeyboardButton('Альпийские Луга (джип-тур)')
 kb_client_abhaz = ReplyKeyboardMarkup(resize_keyboard=True)
 kb_client_abhaz.row(kb_abhaz_var1).row(kb_abhaz_var2, kb_abhaz_var3).row(kb_abhaz_var5)#, kb_abhaz_var7)#.add(kb_abhaz_var6)
 
@@ -68,10 +63,6 @@ kb_client_abhaz.row(kb_abhaz_var1).row(kb_abhaz_var2, kb_abhaz_var3).row(kb_abha
 # море
 kb_voda_var1 = KeyboardButton('Морская прогулка')
 kb_voda_var2 = KeyboardButton('Рыбалка в море')
-# kb_voda_var3 = KeyboardButton('Дайвинг (с аквалангом)')
-# kb_voda_var4 = KeyboardButton('Рафтинг (сплав по реке)')
-# kb_voda_var5 = KeyboardButton('Дельфинарий «Ривьера»')
-# kb_voda_var6 = KeyboardButton('Аквапарк')
 kb_voda_var7 = KeyboardButton('АРЕНДА ЯХТ')
 kb_client_voda = ReplyKeyboardMarkup(resize_keyboard=True)
 kb_client_voda.add(kb_voda_var1).add(kb_voda_var2).add(kb_voda_var7)
@@ -84,26 +75,9 @@ kb_vozduh_var7 = KeyboardButton('Конные Прогулки')
 kb_vozduh_var8 = KeyboardButton('Солохаул Парк')
 kb_vozduh_var9 = KeyboardButton('Дайвинг')
 kb_vozduh_var1 = KeyboardButton('Параплан')
-#kb_vozduh_var2 = KeyboardButton('Воздушный Шар')
-#kb_vozduh_var3 = KeyboardButton('Вертолёт')
-#kb_vozduh_var4 = KeyboardButton('Парашют')
 
 kb_client_vozduh = ReplyKeyboardMarkup(resize_keyboard=True)
 kb_client_vozduh.row(kb_vozduh_var5, kb_vozduh_var9).row(kb_vozduh_var7, kb_vozduh_var6).row(kb_vozduh_var1).add(kb_vozduh_var8)
-
-
-# прочее
-#kb_proch_var1 = KeyboardButton('Шашлыки (индивидуальный)')
-#kb_proch_var2 = KeyboardButton('Вечеринка в лесу')
-#kb_proch_var3 = KeyboardButton('Аквапарк')
-#kb_proch_var4 = KeyboardButton('Сафари Парк')
-#kb_proch_var5 = KeyboardButton('Форт Боярд')
-#kb_proch_var6 = KeyboardButton('Квесты')
-#kb_proch_var7 = KeyboardButton('Билеты на мероприятия')
-#kb_proch_var8 = KeyboardButton('ДРУГОЕ')
-#kb_client_proch = ReplyKeyboardMarkup(resize_keyboard=True)
-#kb_client_proch.row(kb_proch_var1, kb_proch_var2).row(kb_proch_var3, kb_proch_var4).row(kb_proch_var5, kb_proch_var6).row(kb_proch_var7, kb_proch_var8)
-
 
 
 
